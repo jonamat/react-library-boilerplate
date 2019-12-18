@@ -8,13 +8,13 @@ It provides also support for component testing with Jest, React Testing Library 
 ## Installation
 
 ```cli
-npm i git+https://github.com/jonamat/react-library-boilerplate.git
+npm i **package name**
 ```
 
 ## Compatibility
 
 Compatible with React >=16.8.0\
-Compatible with Node >=8.0.0\
+Compatible with Node >=8.0.0
 
 ## Feature
 - List of the features of the lib
@@ -22,7 +22,7 @@ Compatible with Node >=8.0.0\
 
 ### Other features
 - Runtime type checking with prop-types and static with typescript declaration files
-- Exaustive doc comments
+- Exhaustive doc comments
 - Tree shakable: exported with ESM modules
 - Tested with available coverage report
 
