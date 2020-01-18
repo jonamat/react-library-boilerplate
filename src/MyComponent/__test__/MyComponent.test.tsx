@@ -28,10 +28,7 @@ describe('Component', () => {
     });
 
     it('matches the snapshot', () => {
-        const fallbackSnapshoot = create(<MyComponent />).toJSON();
-        expect(fallbackSnapshoot).toMatchSnapshot();
-
-        const childSnapshoot = create(<MyComponent />).toJSON();
-        expect(childSnapshoot).toMatchSnapshot();
+        const componentSnapshoot = create(<MyComponent />).toJSON();
+        expect(componentSnapshoot).toMatchSnapshot();
     });
 });
