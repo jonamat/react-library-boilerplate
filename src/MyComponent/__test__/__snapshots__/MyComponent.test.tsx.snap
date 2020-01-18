@@ -7,11 +7,3 @@ Array [
   "!",
 ]
 `;
-
-exports[`Component matches the snapshot 2`] = `
-Array [
-  "Hello ",
-  "world",
-  "!",
-]
-`;
