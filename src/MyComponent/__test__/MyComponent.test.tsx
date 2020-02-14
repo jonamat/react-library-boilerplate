@@ -5,10 +5,15 @@ import { create } from 'react-test-renderer';
 
 import MyComponent from '..';
 
-console.error = jest.fn();
+const consoleError = jest.fn();
+Object.defineProperty(console, 'error', {
+    get() {
+        return consoleError;
+    },
+});
 
 beforeEach(() => {
-    console.error.mockClear();
+    consoleError.mockClear();
 });
 
 const renderComponent = (props?: React.ComponentProps<typeof MyComponent>) => render(<MyComponent {...props} />);
@@ -18,7 +23,7 @@ describe('Component', () => {
         expect(() => {
             const { queryByTestId } = renderComponent({ myProp: <span data-testid="children">mars</span> });
 
-            expect(console.error).not.toBeCalled();
+            expect(consoleError).not.toBeCalled();
             expect(queryByTestId('children')).toBeInTheDocument();
         }).not.toThrowError();
     });
