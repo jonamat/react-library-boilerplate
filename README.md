@@ -1,9 +1,13 @@
 # react-library-boilerplate
 
+![version](https://img.shields.io/npm/v/react)
+![size](https://img.shields.io/bundlephobia/min/react)
+![download](https://img.shields.io/npm/dm/react)
+
 Starting point for my React components libraries.\
 It provides a bunch of semi-defined files to speed up lib developing and publishing (included this readme).\
 Build script transpiles typescript source to tree-shakable esnext code with ES modules and legacy ES5 code with commonJS modules, both generated with ts declaration file.\
-It provides also support for component testing with Jest, React Testing Library and React Test Renderer, coverage reports, eslint linting and prettier/editorConfig integration
+It provides also support for component testing with Jest, React Testing Library and React Test Renderer, coverage reports, eslint linting and prettier/editorConfig integration.
 
 ## Installation
 
@@ -16,7 +20,7 @@ npm i **package name**
 Compatible with React >=16.8.0\
 Compatible with Node >=8.0.0
 
-## Feature
+## Features
 - List of the features of the lib
 - "Other features" are common features provided in all my libs
 
@@ -40,9 +44,9 @@ MyComponent description
 
 ```import { MyComponent } from 'react-library-boilerplate'```
 
-| Prop     | Type      | Default | Description    |
-| -------- | --------- | ------- | -------------- |
-| `myProp` | ReactNode | `world` | Something cool |
+| Prop      | Type      | Default | Description    |
+| --------- | --------- | ------- | -------------- |
+| `myProp`? | ReactNode | `world` | Something cool |
 
 ---
 
