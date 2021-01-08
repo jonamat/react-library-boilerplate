@@ -1,9 +1,30 @@
+/* -------------------------------------------------------------------------- *
+ * Copyright (c) Jonathan Mataloni. All rights reserved.
+ * Licensed under the MIT License.
+ * See License.txt in the project root for license information.
+ *
+ * ----------------------------- Unit test suite ---------------------------- *
+ *
+ * Target: Database update system (delete data)
+ * Tests:
+ * - Props validation
+ * - Functionality
+ * - Matching render snapshot
+ *
+ * -------------------------------------------------------------------------- */
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { create } from 'react-test-renderer';
 
+/* ---------------------------- Component to test --------------------------- */
+
 import MyComponent from '..';
+
+/* -------------------------------------------------------------------------- */
+/*                                    Mocks                                   */
+/* -------------------------------------------------------------------------- */
 
 const consoleError = jest.fn();
 Object.defineProperty(console, 'error', {
@@ -12,11 +33,27 @@ Object.defineProperty(console, 'error', {
     },
 });
 
+/* -------------------------------------------------------------------------- */
+/*                              Bridge operations                             */
+/* -------------------------------------------------------------------------- */
+
 beforeEach(() => {
     consoleError.mockClear();
 });
 
+/* -------------------------------------------------------------------------- */
+/*                               Render wrapper                               */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Render the component with the custom configuration
+ * @param props Component props
+ */
 const renderComponent = (props?: React.ComponentProps<typeof MyComponent>) => render(<MyComponent {...props} />);
+
+/* -------------------------------------------------------------------------- */
+/*                                    Tests                                   */
+/* -------------------------------------------------------------------------- */
 
 describe('Component', () => {
     it('render properly', () => {
@@ -33,7 +70,7 @@ describe('Component', () => {
     });
 
     it('matches the snapshot', () => {
-        const componentSnapshoot = create(<MyComponent />).toJSON();
-        expect(componentSnapshoot).toMatchSnapshot();
+        const componentSnapshot = create(<MyComponent />).toJSON();
+        expect(componentSnapshot).toMatchSnapshot();
     });
 });
