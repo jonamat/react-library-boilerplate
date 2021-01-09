@@ -29,9 +29,9 @@
         "build": "rimraf ./lib/* && concurrently \"npm run build:cjs \" \"npm run build:esm \" ",
         "build:cjs": "rimraf ./lib/cjs && tsc -p . --outDir ./lib/cjs --module commonjs --target es5",
         "build:esm": "rimraf ./lib/esm && tsc -p . --outDir ./lib/esm --module esnext --target esnext",
-        "test": "jest ./src",
-        "test:watch": "jest ./src --watch",
-        "test:coverage": "jest ./src --coverage",
+        "test": "jest .*.test.tsx?",
+        "test:watch": "jest .*.test.tsx? --watch",
+        "test:coverage": "jest .*.test.tsx? --coverage",
         "lint": "eslint --ext .ts,.tsx ./src",
         "lint:fix": "eslint --fix --ext .ts,.tsx ./src",
         "prepublish": "npm run lint:fix && npm run test && npm run build"
