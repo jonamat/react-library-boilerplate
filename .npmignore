@@ -1,5 +1,7 @@
-src
-coverage
+/node_modules
+/src
+/coverage
+/tests
 .vscode
 .eslintrc
 .eslintignore
@@ -8,4 +10,4 @@ coverage
 .prettierrc
 .editorConfig
 tsconfig.json
-*.config.js
+jest.config.js
