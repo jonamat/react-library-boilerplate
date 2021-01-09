@@ -1,6 +1,11 @@
+# Files to consider for lang stats
+* linguist-detectable=false
+src/**/* linguist-detectable=true
+test/**/* linguist-detectable=true
+
+# Generated files
+coverage/**/* linguist-generated=true
+lib/**/* linguist-generated=true
+
+# Normalize line ending
 * text=auto
-coverage/* linguist-vendored
-lib/* linguist-vendored
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.css linguist-detectable=false
