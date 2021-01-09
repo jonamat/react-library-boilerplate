@@ -26,9 +26,7 @@
         "lib/**/*"
     ],
     "scripts": {
-        "build": "shx rm -rf ./lib/* && concurrently \"npm run build:cjs \" \"npm run build:esm \" ",
-        "build:cjs": "shx rm -rf ./lib/cjs && tsc -p . --outDir ./lib/cjs --module commonjs --target es5",
-        "build:esm": "shx rm -rf ./lib/esm && tsc -p . --outDir ./lib/esm --module esnext --target esnext",
+        "build": "shx rm -rf ./lib/* && concurrently \"tsc --outDir ./lib/cjs --module commonjs --target es5 \" \"tsc --outDir ./lib/esm --module esnext --target esnext \" ",
         "test": "jest .*.test.tsx?",
         "test:watch": "jest .*.test.tsx? --watch",
         "test:coverage": "jest .*.test.tsx? --coverage",
