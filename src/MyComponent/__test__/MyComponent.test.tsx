@@ -20,7 +20,7 @@ import { create } from 'react-test-renderer';
 
 /* ---------------------------- Component to test --------------------------- */
 
-import MyComponent from '..';
+import MyComponent, { MyComponentProps } from '..';
 
 /* -------------------------------------------------------------------------- */
 /*                                    Mocks                                   */
@@ -49,7 +49,7 @@ beforeEach(() => {
  * Render the component with the custom configuration
  * @param props Component props
  */
-const renderComponent = (props?: React.ComponentProps<typeof MyComponent>) => render(<MyComponent {...props} />);
+const renderComponent = (props?: MyComponentProps) => render(<MyComponent {...props} />);
 
 /* -------------------------------------------------------------------------- */
 /*                                    Tests                                   */

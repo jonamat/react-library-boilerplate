@@ -7,7 +7,7 @@
 import React, { FC, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 
-interface MyComponentProps {
+export interface MyComponentProps {
     /** Inline prop doc example. Default `world` */
     myProp?: ReactNode;
 }
