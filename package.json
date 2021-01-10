@@ -14,7 +14,7 @@
     },
     "engines": {
         "node": ">=8.0.0",
-        "npm": ">=5.0.0"
+        "npm": ">=7.0.0"
     },
     "license": "MIT",
     "main": "lib/cjs/index.js",
@@ -49,9 +49,6 @@
         "eslint-plugin-react": "7.22.0",
         "jest": "26.6.3",
         "prettier": "2.2.1",
-        "prop-types": "15.7.2",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
         "react-test-renderer": "^17.0.1",
         "shx": "^0.3.3",
         "ts-jest": "26.4.4",
